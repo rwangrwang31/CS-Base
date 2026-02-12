@@ -32,26 +32,16 @@
 
 ### vercel.json
 
-Vercel 的部署配置文件，定义了项目的构建和路由规则。
+Vercel 的部署配置文件，定义了项目名称和版本。
 
 ```json
 {
   "version": 2,
-  "name": "cs-base",
-  "builds": [
-    {
-      "src": "index.html",
-      "use": "@vercel/static"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/$1"
-    }
-  ]
+  "name": "cs-base"
 }
 ```
+
+Vercel 会自动检测静态文件并进行部署，无需额外的构建和路由配置。
 
 ### .nojekyll
 
